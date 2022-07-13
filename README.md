@@ -1,1 +1,1 @@
-# morse-cod--translator
+# morse-code-translator
