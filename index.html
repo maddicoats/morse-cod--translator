@@ -6,10 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morse Code Translator</title>
 
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Bungee+Hairline&family=Chakra+Petch:wght@300&family=Geostar+Fill&family=Libre+Barcode+39&family=Montserrat&family=Orbitron&family=Poppins:wght@300&family=Skranji:wght@700&family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="mct.ico">
 </head>
 <body>
-    <div class="container"></div>
-    <div class="container"></div>
+    <main>
+    <h1>morse code translator</h1>
+
+    <div class="container-container">
+    <div class="container">
+        <h3>TEXT:</h3>
+        <textarea class="text" rows="7" wrap="hard" placeholder="enter your text here"></textarea>
+    </div>
+    
+    <div class="container">
+        <h3>MORSE CODE:</h3>
+        <textarea class="morsecode" rows="7" wrap="hard" placeholder="---... -.--.-"></textarea>
+    </div>
+    </div>
+
+    <div class="buttonbox">
+        <button class="clearButton">CLEAR ALL</button>
+    </div>
+    </main>
+
+<script src="script.js"></script>
 </body>
 </html>
