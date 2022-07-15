@@ -5,12 +5,13 @@
 body {
     background-color: #0c0c0c;
     color: #adff2f;
-    margin: 0px;
+    margin: 15px;
     height: 100%;
 }
 
 main {
     margin: 40px;
+
 }
 
 h1 {
@@ -37,6 +38,8 @@ h1 {
         background-color: #2e2e2e;
         color: greenyellow;
         padding: 10px;
+        font-family: 'Orbitron', sans-serif;
+        letter-spacing: 3px;
 
         &:focus {
             outline: none;
@@ -78,5 +81,28 @@ h1 {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 40px
+    }
+
+    textarea {
+        height: 25em;
+    }
+}
+
+// ------- SCROLLBAR -------
+
+::-webkit-scrollbar {
+    width: 7px;
+
+    &-track {
+        background: transparent;
+    }
+
+    &-thumb {
+        background: #2e2e2e;
+        border-radius: 7px;
+
+        &:hover {
+            background: greenyellow;
+        }
     }
 }
