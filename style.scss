@@ -1,3 +1,5 @@
+@use 'screens';
+
 * {
     font-family: monospace;
 }
@@ -79,24 +81,6 @@ h1 {
 
     &:active {
         color: white;
-    }
-}
-
-/* --------SCREEN SIZES--------- */
-
-@media only screen and (min-width: 850px) {
-    .container-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 40px
-    }
-
-    textarea {
-        height: 25em;
-    }
-
-    .morsecode {
-        height: 18.75em;
     }
 }
 

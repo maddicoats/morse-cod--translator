@@ -1,5 +1,4 @@
-//OBJECTS
-const textRef = {
+export const textRef = {
    "a": ".-",
    "b": "-...",
    "c": "-.-.",
@@ -57,43 +56,7 @@ const textRef = {
     '/': '-..-.',
 }
 
-const morseRef = Object.keys(textRef).reduce(
+export const morseRef = Object.keys(textRef).reduce(
   (obj, char) => ({ ...obj, [textRef[char]]: char }),
   {}
 );
-
-
-//TRANSLATION FUNCTIONS
-function textToMorse(str) {
-    return [...str.toLowerCase()].map((letter) => textRef[letter]).join(' ');
-}
-
-function morseToText(str) {
-    return str.split(' ').map((morse) => morseRef[morse]).join('');
-}
-
-
-//DOM VARIABLES
-const text = document.querySelector('.text')
-const morsecode = document.querySelector('.morsecode')
-
-
-//EVENT LISTENERS
-document.querySelector('.clearButton').addEventListener('click', () => {
-    text.value = '';
-    morsecode.value = '';
-})
-
-text.addEventListener('keyup', () => {
-    outputTranslation(morsecode, textToMorse, text)
-})
-
-morsecode.addEventListener('keyup', () => {
-    outputTranslation(text, morseToText, morsecode)
-})
-
-
-//OUTPUT FUNCTION
-function outputTranslation(outputElement, transFunction, inputElement) {
-    outputElement.value = transFunction(inputElement.value);
-}
