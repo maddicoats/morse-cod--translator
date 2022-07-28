@@ -18,13 +18,14 @@ h1 {
   font-family: "Geostar Fill", cursive;
   letter-spacing: 3px;
   margin-bottom: 30px;
+  font-size: 40px;
 }
 
 .container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .container h3 {
   text-align: center;
@@ -38,10 +39,16 @@ h1 {
   padding: 10px;
   font-family: "Orbitron", sans-serif;
   letter-spacing: 3px;
+  font-size: 15px;
 }
 .container textarea:focus {
   outline: none;
   border: 1px solid greenyellow;
+}
+.container .morsecode {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 4px;
 }
 
 .buttonbox {
@@ -77,6 +84,9 @@ h1 {
   }
   textarea {
     height: 25em;
+  }
+  .morsecode {
+    height: 18.75em;
   }
 }
 ::-webkit-scrollbar {

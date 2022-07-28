@@ -1,3 +1,4 @@
+//OBJECTS
 const textRef = {
    "a": ".-",
    "b": "-...",
@@ -39,7 +40,7 @@ const textRef = {
     '&': '.-...',
     "'": '.----.',
     '@': '.--.-.',
-    $: '···−··−',
+    '$': '···−··−',
     ')': '-.--.-',
     '(': '-.--.',
     ':': '---...',
@@ -49,7 +50,7 @@ const textRef = {
     '!': '-.-.--',
     '.': '.-.-.-',
     '-': '-....-',
-    _: '··−−·−',
+    '_': '··−−·−',
     '+': '.-.-.',
     '"': '.-..-.',
     '?': '..--..',
@@ -61,6 +62,7 @@ const morseRef = Object.keys(textRef).reduce(
   {}
 );
 
+//SULLIED FUNCTIONS
 function textToMorse(str) {
     return [...str.toLowerCase()].map((letter) => textRef[letter]).join(' ');
 }
@@ -70,29 +72,27 @@ function morseToText(str) {
 }
 
 
+//DOM VARIABLES
 const text = document.querySelector('.text')
 const morsecode = document.querySelector('.morsecode')
 
 
+//EVENT LISTENERS
 document.querySelector('.clearButton').addEventListener('click', () => {
     text.value = '';
     morsecode.value = '';
 })
 
 text.addEventListener('keyup', () => {
-    outputMorse()
+    outputTranslation(morsecode, textToMorse, text)
 })
 
 morsecode.addEventListener('keyup', () => {
-    outputText()
+    outputTranslation(text, morseToText, morsecode)
 })
 
 
-
-function outputMorse() {
-    morsecode.value = textToMorse(text.value)
-}
-
-function outputText() {
-    text.value = morseToText(morsecode.value)
+//PURE FUNCTION
+function outputTranslation(outputElement, transFunction, inputElement) {
+    outputElement.value = transFunction(inputElement.value);
 }
