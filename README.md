@@ -2,7 +2,7 @@
 
 A web page that translates text to morse code and morse code to text.
 
-![image](https://user-images.githubusercontent.com/107823527/181436236-1675bb11-d501-4b11-a124-c27bb6b3a534.png)
+![image](https://user-images.githubusercontent.com/107823527/181436236-1675bb11-d501-4b11-a124-c27bb6b3a534.png =300x)
 
 
 ### MVP
